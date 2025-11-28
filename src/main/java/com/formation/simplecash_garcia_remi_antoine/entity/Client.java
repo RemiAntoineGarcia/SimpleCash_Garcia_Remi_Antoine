@@ -19,7 +19,7 @@ public class Client {
     private Long id;
 
     @NotBlank(message ="FirstName cannot be empty")
-    private String FirstName;
+    private String firstName;
     @NotBlank(message ="LastName cannot be empty")
     private String LastName;
     private String Adresse;
