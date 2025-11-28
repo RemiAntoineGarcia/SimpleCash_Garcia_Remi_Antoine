@@ -4,10 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Data
@@ -26,8 +23,11 @@ public class Client {
     private String PostalCode;
     private String City;
     private String Telephone;
-
-    private long CourantCompte;
-    private long EpargneCompte;
+    @Setter
+    @Getter
+    private long CourantCompte=-1;
+    @Setter
+    @Getter
+    private long EpargneCompte=-1;
 
 }
