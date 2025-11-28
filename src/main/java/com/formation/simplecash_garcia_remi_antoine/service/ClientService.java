@@ -14,4 +14,6 @@ public interface ClientService {
     Optional<ClientDataDto> getClientByFirstName(String name);
     ClientDataDto save(ClientCreateDto dto);
     Optional<ClientDataDto> update(Long id, ClientUpdateDto dto);
+    Boolean delete(Long id);
+
 }

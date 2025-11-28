@@ -60,5 +60,12 @@ public class ClientServiceImpl implements ClientService {
         );
     }
 
+    @Override
+    public Boolean delete(Long id) {
+        return repository.findById(id).map(existingClient -> {repository.delete(existingClient);
+            return true;
+        }).orElse(false);
+
+    }
 
 }

@@ -45,4 +45,13 @@ public class ClientController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteClient(@PathVariable @Valid Long id)
+    {
+        if(clientService.delete(id))
+        {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
